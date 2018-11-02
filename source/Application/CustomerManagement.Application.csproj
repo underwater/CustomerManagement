@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Domain\CustomerManagement.Domain.csproj" />
+        <ProjectReference Include="..\Model\CustomerManagement.Model.csproj" />
+    </ItemGroup>
+</Project>

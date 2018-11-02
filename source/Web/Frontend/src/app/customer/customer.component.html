@@ -1,0 +1,22 @@
+<div class="uk-width-1-3@l">
+    <input class="uk-input" type="text" placeholder="Search" [(ngModel)]="search">
+
+    <table class="uk-table uk-table-divider uk-table-hover uk-table-small uk-table-striped">
+        <thead>
+            <tr>
+                <th class="uk-text-center">Id</th>
+                <th>Name</th>
+                <th class="uk-text-center">Date of Birth</th>
+                <th class="uk-text-right">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers | filter:search">
+                <td class=" uk-text-center">{{ customer?.id }}</td>
+                <td>{{ customer?.name }}</td>
+                <td class="uk-text-center">{{ customer?.dateOfBirth | date:'shortDate' }}</td>
+                <td class="uk-text-right">{{ customer?.salary | currency:'BRL' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
